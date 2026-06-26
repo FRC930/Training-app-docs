@@ -2,9 +2,6 @@
 weight: 5
 title: "5. Functions"
 description: ""
-icon: "article"
-date: "2026-06-25T18:24:05-05:00"
-lastmod: "2026-06-25T18:24:05-05:00"
 draft: false
 toc: true
 ---
@@ -12,7 +9,7 @@ toc: true
  1. Open and run Functions.java.
  - What do you notice about the code?
  - What do you notice about the result?
- 2. Break down what you see.
+ 1. Break down what you see.
  ```
    This tells Java that we want a *function* in our class
    |     This tells Java we won't return anything
@@ -25,10 +22,10 @@ toc: true
  }
  ```
  - This breakdown uses unknown language like class, and paramaters, which we will learn later.
- 3. Edit the code in the function.
+ 1. Edit the code in the function.
  - Add some other println to the function. Remember, the code should be put in after the first println, but before the ending curly bracet (`}`).
  - Run the code, and see what happens.
- 4. Functions make code easier to write and read.
+ 1. Functions make code easier to write and read.
  - Think back on the MathProblems.java you wrote. How could you improve this with functions?
  - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
 
