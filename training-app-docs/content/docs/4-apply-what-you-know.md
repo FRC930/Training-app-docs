@@ -12,21 +12,25 @@ Lets create a handful of math problems and print the results. The point of this 
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
- 1. Create 4 subtraction calculations
+2. Create 4 subtraction calculations
+
  - Example: `1 - 2 = -1`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
- 1. Create 4 multiplication calculations
+3. Create 4 multiplication calculations
+
  - Example: `2 * 2 = 4`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers
  - One math problem should be done with floats
  - One math problem should be down with doubles
  - One math problem of your choice
-  1. Create 4 division calculations
+
+4. Create 4 division calculations
+
  - Example: `4 / 2 = 2`
  - There should be three variables created for each number in each calculation
  - One math problem should be done with integers

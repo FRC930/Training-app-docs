@@ -9,7 +9,8 @@ toc: true
  1. Open and run Functions.java.
  - What do you notice about the code?
  - What do you notice about the result?
- 1. Break down what you see.
+2. Break down what you see.
+
  ```
    This tells Java that we want a *function* in our class
    |     This tells Java we won't return anything
@@ -22,10 +23,13 @@ toc: true
  }
  ```
  - This breakdown uses unknown language like class, and paramaters, which we will learn later.
- 1. Edit the code in the function.
+3. Edit the code in the function.
+
  - Add some other println to the function. Remember, the code should be put in after the first println, but before the ending curly bracet (`}`).
  - Run the code, and see what happens.
- 1. Functions make code easier to write and read.
+
+4. Functions make code easier to write and read.
+
  - Think back on the MathProblems.java you wrote. How could you improve this with functions?
  - You will need to learn one more thing about functions before you can rewrite MathProblems with functions.
 
@@ -61,7 +65,9 @@ multiply(2, 9);
  - The red squigglies on `multiply` read: `The method multiply(int, int) in the type ParametersSolution is not applicable for the arguments (double, double).` This is basically telling you that multiply *MUST* take in 2 ints, and cannot take in 2 doubles.
  5. Duplicate (copy & paste) multiply, and modify it to take in 2 doubles, and name it `multiplyDecimals`.
  - Try to change the `multiply(2.3,6.1);` into a `multiplyDecimals(2.3,6.1);`.
- 4. Problem with functions currently:
+
+6. Problem with functions currently:
+
  - What if you didn't want to just print out the result, but pass it into another function, or do something else rather than printing?
 
 ### Return Values <!-- TODO: Finish Machines explanation -->
