@@ -1,0 +1,13 @@
+{{- $target := site.GetPage "/docs/1-env-setup" -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.Title }}</title>
+  <meta http-equiv="refresh" content="0; url={{ $target.RelPermalink }}">
+  <link rel="canonical" href="{{ $target.Permalink }}">
+</head>
+<body>
+  <p>Redirecting to <a href="{{ $target.RelPermalink }}">{{ $target.Title }}</a>&hellip;</p>
+</body>
+</html>

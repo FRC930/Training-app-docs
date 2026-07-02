@@ -2,4 +2,7 @@ module github.com/jackrschumacher/Training-app-docs
 
 go 1.26.4
 
-require github.com/alex-shpak/hugo-book v0.14.0 // indirect
+require (
+
+	github.com/imfing/hextra v0.12.3 // indirect
+)
