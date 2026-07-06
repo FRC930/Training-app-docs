@@ -25,7 +25,7 @@ params:
     # key: "announcement"
     # message: This site has recently been migrated to Hugo. Report issues [here](https://github.com/jackrschumacher/website/issues)
   footer:
-    enable: true
+    enable: false
     displayCopyright: true
     displayPoweredBy: false
     width: normal
