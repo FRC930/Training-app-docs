@@ -29,12 +29,14 @@ toc: true
      - Does it work?
      - What do you think is happening?
      - Try to fix it!
- <details>
- <summary>Click for Answer!</summary>
- When you are adding the two strings together, it adds "Hello!" and "Again!". There isn't a space inbetween, resulting in "Hello!Again!" You can fix it by adding a space after "Hello! " or before " Again!" View the solution if confused.
- </details>
 
-<!--67!!!!!!!!-->
+{{< details title="Click for Answer!" closed="true" >}}
+
+When you are adding the two strings together, it adds "Hello!" and "Again!". There isn't a space inbetween, resulting in "Hello!Again!" You can fix it by adding a space after "Hello! " or before " Again!" View the solution if confused.
+
+{{< /details >}}
+
+
 #### Float
  1. Add `float myDecimal = 2.5f;` and `float mySecondDecimal = 5.0f;` to Variables.java.
 

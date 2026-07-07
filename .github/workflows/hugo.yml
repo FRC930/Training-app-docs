@@ -17,16 +17,18 @@ concurrency:
 defaults:
   run:
     working-directory: training-app-docs
+    shell: bash
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
           fetch-depth: 0
+
       - name: Read Hugo version from .hvm
         id: hvm
         run: |
@@ -36,6 +38,7 @@ jobs:
           HUGO_EDITION="${HVM_CONTENTS##*/}"
           echo "version=${HUGO_VERSION}" >> "$GITHUB_OUTPUT"
           echo "edition=${HUGO_EDITION}" >> "$GITHUB_OUTPUT"
+
       - name: Install Hugo CLI
         run: |
           if [ "${{ steps.hvm.outputs.edition }}" = "extended" ]; then
@@ -45,22 +48,43 @@ jobs:
           fi
           curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${{ steps.hvm.outputs.version }}/${ASSET}" -o /tmp/hugo.deb
           sudo dpkg -i /tmp/hugo.deb
-      - name: Setup Go
-        uses: actions/setup-go@v5
+
+      - name: Install Go
+        uses: actions/setup-go@v6
         with:
           go-version: "stable"
+
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
+
+      - name: Cache restore
+        id: cache-restore
+        uses: actions/cache/restore@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: hugo-${{ github.run_id }}
+          restore-keys: hugo-
+
       - name: Build with Hugo
         run: |
-          hugo \
+          hugo build \
+            --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --cacheDir "${{ runner.temp }}/hugo_cache"
+
+      - name: Cache save
+        uses: actions/cache/save@v5
+        with:
+          path: ${{ runner.temp }}/hugo_cache
+          key: ${{ steps.cache-restore.outputs.cache-primary-key }}
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: training-app-docs/public
+          include-hidden-files: false
 
   deploy:
     environment:
@@ -71,4 +95,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

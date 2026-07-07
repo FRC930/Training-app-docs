@@ -42,20 +42,14 @@ toc: true
  - While this may seem redundant (Why not just use `*`?), it is easy for practice.
  - Add another parameter into the square function, by adding a comma, and then another variable declaration.
 
-<details>
-<summary>Click for solution.</summary>
+{{< details title="Click for Solution" closed="true" >}}
+```java
 static void square(int num, int num2)
-</details>
+```
+{{< /details >}}
 
  - Rename the function by right-clicking on "square" and in the menu, clicking on "Rename Symbol".
  - Update all of the function calls to use this new paramater with a comma.
-
-<details>
-<summary>Click for solution.</summary>
-<!--67!!!!!!!!-->
-multiply(3, 6);
-multiply(2, 9);
-</details>
 
  3. Pass in some variables to `multiply()`.
  - Create some `int` variables in main.
@@ -83,8 +77,8 @@ multiply(2, 9);
  - Try fixing the function.
     - Remember - the paramater used in the template is a float.
 
-<details>
-<summary>Click for solution.</summary>
+{{< details title="Click for Solution" closed="true" >}}
+```java
 static float square(float num){
     //code
 }
@@ -94,4 +88,5 @@ Turns into...
 static int square(int num){
     //code
 }
-</details>
+```
+{{< /details >}}
