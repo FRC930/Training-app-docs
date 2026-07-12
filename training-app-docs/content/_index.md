@@ -1,5 +1,6 @@
 ---
 title: Training App Documentation
+comments: false
 ---
 
 <br>

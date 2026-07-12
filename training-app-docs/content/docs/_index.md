@@ -1,7 +1,10 @@
 ---
 title: Documentation
+
 cascade:
   type: docs
+  comments: true
+  
 ---
 
 Start here:
