@@ -7,5 +7,5 @@ Provide feedback on the training by leaving a comment on this page or creating a
 
 
 {{< cards cols="1" >}}
-    {{< card link="https://github.com/FRC930/Training-app-docs/issues" icon="check-circle" title="GitHub Issues" >}}
+    {{< card link="https://github.com/FRC930/Training_App/issues" icon="check-circle" title="GitHub Issues" >}}
 {{< /cards >}}
