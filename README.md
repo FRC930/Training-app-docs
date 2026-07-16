@@ -13,6 +13,8 @@ This site is built using [Hugo](https://gohugo.io), a static site generating too
 
 ## Set up
 
-[Follow the instructions to set up a new Hugo site and install the Hextra theme](https://imfing.github.io/hextra/docs/getting-started/#setup-hextra-as-hugo-module)
+[Install Go- Required because of Hugo modules](https://go.dev/dl/)
+
+[Follow the instructions to set up a new Hugo site and install the Hextra theme- Setup the theme as a Hugo module](https://imfing.github.io/hextra/docs/getting-started/#setup-hextra-as-hugo-module)
 
 [Installing Hugo Version Manager (hvm)](https://github.com/jmooring/hvm#installation)
